@@ -11,7 +11,7 @@
             <div class="card-header">
                 <h3>회원가입</h3>
             </div>
-            <form method="post" action="#" th:action="@{/join}" th:object="${user}">
+            <form method="post" action="#" th:action="@{/join}" th:object="${userDto}">
                 <div class="card-body">
                     <div>
                         <label for="userId">UserId:</label>
@@ -22,8 +22,32 @@
                         <input type="password" id="password" name="password" required>
                     </div>
                     <div>
-                        <label for="confirmPassword">Confirm Password:</label>
-                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <label for="userName">Username:</label>
+                        <input type="text" id="userName" name="userName" required>
+                    </div>
+                    <div>
+                        <label for="userEnName">UserEnName:</label>
+                        <input type="text" id="userEnName" name="userEnName" required>
+                    </div>
+                    <div>
+                        <label for="birthDate">BirthDate:</label>
+                        <input type="date" id="birthDate" name="birthDate" required>
+                    </div>
+                    <div>
+                        <label for="phoneNumber">PhoneNumber:</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+                    <div>
+                        <label for="level">Level:</label>
+                        <input type="text" id="level" name="level" required>
+                    </div>
+                    <div>
+                        <label for="enteredDate">EnteredDate:</label>
+                        <input type="date" id="enteredDate" name="enteredDate" required>
+                    </div>
+                    <div>
+                        <label for="emailAddress">EmailAddress:</label>
+                        <input type="text" id="emailAddress" name="emailAddress" required>
                     </div>
                     <div th:if="${error}" style="color: red;">
                         <p th:text="${error}"></p>

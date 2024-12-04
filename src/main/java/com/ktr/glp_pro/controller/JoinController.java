@@ -1,7 +1,7 @@
 package com.ktr.glp_pro.controller;
 
 import com.ktr.glp_pro.dto.UserDTO;
-import com.ktr.glp_pro.service.RegistService;
+import com.ktr.glp_pro.service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class JoinController {
 
     @Autowired
-    private RegistService registService;
+    private RegisterService registerService;
 
     @GetMapping
     public String showJoinForm() {
@@ -25,11 +25,11 @@ public class JoinController {
     @PostMapping
     public String registUser(@ModelAttribute UserDTO userDto, Model model) {
         try {
-            registService.registUser(userDto);
+            registerService.registerUser(userDto);
             return "redirect:/login";
         } catch (Exception e) {
             model.addAttribute("error", "User registration failed: " + e.getMessage());
-            return "join";
+            return "contents/join";
         }
     }
 }

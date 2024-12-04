@@ -25,12 +25,12 @@ public class LoginController {
 
         // 로그인 성공 시 홈 화면으로 리다이렉트
         if (isAuthenticated) {
-            return "redirect:/home";
+            return "redirect:/";
         }
         // 로그인 실패 시 에러 메시지 추가 후 다시 로그인 화면으로 포워드
         else {
             model.addAttribute("error", "Invalid userId or password");
-            return "login";
+            return "contents/login";
         }
     }
 }
