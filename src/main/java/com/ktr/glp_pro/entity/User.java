@@ -1,19 +1,18 @@
-package com.ktr.glp_pro.model;
+package com.ktr.glp_pro.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PACKAGE)
 @Getter
+@Builder
 @Table(name = "tb_user")
 public class User {
 

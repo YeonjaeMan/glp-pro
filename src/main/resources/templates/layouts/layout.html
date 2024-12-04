@@ -2,15 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <!-- config -->
-<head th:replace="fragments/config::config"></head>
+<head th:replace="~{fragments/config::config}"></head>
 <body>
 
 <!-- header -->
-<div th:replace="fragments/header::header"></div>
+<div th:replace="~{fragments/header::header}"></div>
 <!-- content -->
 <th:block layout:fragment="content"></th:block>
 <!-- footer -->
-<div th:replace="fragments/footer::footer"></div>
+<div th:replace="~{fragments/footer::footer}"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
